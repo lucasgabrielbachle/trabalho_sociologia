@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marx Weber</title>
+</head>
+<style>
+    /* style.css - Estilos Unificados para o Museu de Curiosidades */
+
+    /* -------------------------------------- */
+    /* ESTILO GLOBAL E CORPO (O "MUSEU") */
+    /* -------------------------------------- */
+
+    body {
+        /* Cor de Fundo: Papel envelhecido ou mármore sutil */
+        background-color: #f4f1e9;
+        /* Off-white, bege claro */
+        color: #333;
+        /* Cor do texto padrão */
+        font-family: 'Georgia', 'Times New Roman', Times, serif;
+        /* Fonte Clássica */
+        margin: 0;
+        padding: 20px;
+        line-height: 1.6;
+    }
+
+    header {
+        background-color: #5d4037;
+        /* Marrom escuro (madeira/veludo) */
+        color: #f7e6c4;
+        /* Bege dourado para o texto */
+        padding: 25px 20px;
+        text-align: center;
+        border-bottom: 5px solid #a87e5b;
+        /* Bordão de moldura */
+        margin-bottom: 30px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    }
+
+    header h1 {
+        font-size: 2.5em;
+        font-weight: bold;
+        letter-spacing: 2px;
+        margin: 0;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+    }
+
+    /* Estilo do link de navegação "Voltar" */
+    nav a {
+        display: inline-block;
+        color: #f7e6c4;
+        text-decoration: none;
+        border: 1px solid #f7e6c4;
+        padding: 5px 10px;
+        margin-top: 10px;
+        border-radius: 3px;
+        transition: background-color 0.2s;
+    }
+
+    nav a:hover {
+        background-color: rgba(247, 230, 196, 0.1);
+    }
+
+    /* -------------------------------------- */
+    /* TÍTULOS SECUNDÁRIOS (PÁGINA INICIAL) */
+    /* -------------------------------------- */
+
+    h2 {
+        color: #8b0000;
+        /* Vermelho escuro/Borgonha */
+        text-align: center;
+        font-size: 1.8em;
+        margin: 30px 0 20px 0;
+        padding-bottom: 5px;
+        border-bottom: 2px dashed #a87e5b;
+        display: block;
+        width: fit-content;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    /* -------------------------------------- */
+    /* SEÇÃO DE SINOPSES (PÁGINA INICIAL) */
+    /* -------------------------------------- */
+
+    .Sinopses {
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        flex-wrap: wrap;
+        padding: 20px;
+    }
+
+    /* O QUADRO/VITRINE */
+    .Sinopses .Sinopse {
+        background-color: #ffffff;
+        border: 3px solid #5d4037;
+        border-radius: 5px;
+        padding: 20px;
+        width: 300px;
+        box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.2);
+        transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        text-align: center;
+    }
+
+    .Sinopses .Sinopse:hover {
+        transform: translateY(-5px) scale(1.02);
+        box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.35);
+        border-color: #8b0000;
+    }
+
+    .Sinopse h1 {
+        /* Título do item (Placa de identificação) */
+        color: #5d4037;
+        font-size: 1.5em;
+        margin-top: 0;
+        padding-bottom: 10px;
+        margin-bottom: 15px;
+        border-bottom: 1px solid #ccc;
+    }
+
+    .Sinopses .Sinopse a {
+        /* Link na página inicial */
+        display: inline-block;
+        background-color: #a87e5b;
+        color: white;
+        text-decoration: none;
+        padding: 8px 15px;
+        margin-top: 10px;
+        border-radius: 3px;
+        font-weight: bold;
+        letter-spacing: 1px;
+        transition: background-color 0.2s;
+        border: 1px solid #7c5c40;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    }
+
+    .Sinopses .Sinopse a:hover {
+        background-color: #8b0000;
+    }
+
+    /* -------------------------------------- */
+    /* PÁGINA DE DETALHES (S-MARX.HTML) */
+    /* -------------------------------------- */
+
+    main {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+
+    /* O container principal na página de detalhes */
+    .Sinopse {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+        padding: 20px;
+        background-color: #fcfaf5;
+        /* Fundo mais claro para contraste */
+        border: 5px double #a87e5b;
+        /* Borda dupla elegante */
+        border-radius: 10px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Estilo da Imagem (A Moldura) */
+    .Sinopse img {
+        max-width: 100%;
+        height: auto;
+        width: 300px;
+        /* Largura da imagem */
+        border: 10px solid #5d4037;
+        /* Moldura de madeira escura */
+        border-radius: 5px;
+        object-fit: cover;
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+    }
+
+    /* O Painel de Informações */
+    .detalhes-info {
+        padding: 25px;
+        border: 1px solid #ccc;
+        background-color: #ffffff;
+        border-left: 5px solid #8b0000;
+        /* Linha Borgonha de Destaque */
+        border-radius: 5px;
+        box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.05);
+        /* Sombra interna sutil */
+    }
+
+    .detalhes-info h2 {
+        color: #5d4037;
+        text-align: left;
+        border-bottom: 2px solid #a87e5b;
+        padding-bottom: 10px;
+        margin-top: 0;
+        font-size: 1.6em;
+    }
+
+    .detalhes-info p {
+        text-align: justify;
+        font-size: 1.1em;
+        white-space: pre-line;
+        /* Mantém as quebras de linha do HTML */
+    }
+
+    /* -------------------------------------- */
+    /* RODAPÉ */
+    /* -------------------------------------- */
+
+    footer {
+        text-align: center;
+        margin-top: 50px;
+        padding: 15px 0;
+        color: #a87e5b;
+        font-style: italic;
+        border-top: 1px solid #ccc;
+    }
+
+    /* -------------------------------------- */
+    /* MEDIA QUERIES PARA RESPONSIVIDADE */
+    /* -------------------------------------- */
+
+    @media (min-width: 768px) {
+
+        /* No desktop, alinhar imagem e texto lado a lado */
+        .Sinopse {
+            flex-direction: row;
+            align-items: flex-start;
+        }
+
+        .Sinopse img {
+            width: 350px;
+            flex-shrink: 0;
+            /* Impede que a imagem encolha */
+        }
+    }
+</style>
+
+<body>
+    <header>
+        <h1>Marx Weber</h1>
+        <nav>
+            <a href="index.html">Voltar à página inicial</a>
+        </nav>
+    </header>
+    <main>
+        <article class="Sinopse">
+            <img src="image/Max-Weber-Hulton-Archive-Getty-Images-58b88d565f9b58af5c2d9a2e.jpg" alt="Capa Marx Weber">
+
+
+            <div class="detalhes-info">
+                <h2>Marks Weber</h2>
+                <p>Weber, sociólogo, economista e jurista alemão, buscou desenvolver uma metodologia que se concentrasse
+                    na compreensão do significado da ação individual dentro do contexto social. <br> Sociologia
+                    Compreensiva: Ao contrário de Marx (que focava na economia) e Durkheim (que focava nas estruturas
+                    sociais), Weber defendia que o objeto de estudo da Sociologia é a Ação Social, ou seja, o
+                    comportamento humano dotado de sentido e orientado pela ação de outros indivíduos. Seu método exige
+                    a "compreensão" (o Verstehen) dos motivos que levam as pessoas a agir.
+
+                    Tipos Ideais: São modelos conceituais puros, criados pelo sociólogo, para servir como régua na
+                    análise e comparação da realidade social, que é sempre complexa e multifacetada. Weber aplicou-os
+                    para classificar os tipos de Ação Social (racional com relação a fins, racional com relação a
+                    valores, afetiva e tradicional) e os tipos de Dominação/Autoridade (legal-racional, tradicional e
+                    carismática).
+
+                    Racionalização e Burocracia: Weber viu a modernidade como um processo contínuo de racionalização.
+                    Isso significa a crescente prevalência da lógica, da eficiência e do cálculo em todas as esferas da
+                    vida, desde o Estado até as empresas. A burocracia é a forma mais pura da dominação legal-racional,
+                    sendo o sistema administrativo que organiza a sociedade moderna (o "rigor metodológico" do Estado e
+                    das instituições ). Este processo leva ao que ele chamou de "desencantamento do mundo", onde a
+                    religião, a tradição e o mito perdem espaço para a ciência e a razão.
+
+                    A Ética Protestante e o Espírito do Capitalismo: Sua obra mais famosa, na qual ele argumenta que a
+                    ética de certas vertentes do protestantismo (especialmente o calvinismo) – que valorizava o trabalho
+                    duro, a poupança e a acumulação como sinais de predestinação divina foi um fator cultural crucial
+                    para o desenvolvimento do Espírito do Capitalismo no Ocidente.</p>
+
+        </article>
+    </main>
+    <footer>
+        <p>© 2025 Lucas gabriel</p>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,125 @@
+/* style.css */
+
+/* -------------------------------------- */
+/* ESTILO GLOBAL E CORPO (O "MUSEU") */
+/* -------------------------------------- */
+
+body {
+    /* Cor de Fundo: Papel envelhecido ou mármore sutil */
+    background-color: #f4f1e9; /* Off-white, bege claro */
+    color: #333; /* Cor do texto padrão */
+    font-family: 'Georgia', 'Times New Roman', Times, serif; /* Fonte Clássica */
+    margin: 0;
+    padding: 20px;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #5d4037; /* Marrom escuro (madeira/veludo) */
+    color: #f7e6c4; /* Bege dourado para o texto */
+    padding: 25px 20px;
+    text-align: center;
+    border-bottom: 5px solid #a87e5b; /* Bordão de moldura */
+    margin-bottom: 30px;
+    /* Efeito de sombreamento sutil para profundidade */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+header h1 {
+    font-size: 2.5em;
+    font-weight: bold;
+    letter-spacing: 2px; /* Espaçamento para o título parecer mais formal */
+    margin: 0;
+    /* Detalhe: linha fina para parecer um título gravado */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+}
+
+/* -------------------------------------- */
+/* TÍTULOS SECUNDÁRIOS */
+/* -------------------------------------- */
+
+h2 {
+    color: #8b0000; /* Vermelho escuro/Borgonha (cor de veludo ou destaque) */
+    text-align: center;
+    font-size: 1.8em;
+    margin: 30px 0 20px 0;
+    padding-bottom: 5px;
+    /* Linha decorativa abaixo do título */
+    border-bottom: 2px dashed #a87e5b;
+    display: inline-block; /* Para a borda só pegar o tamanho do texto */
+    width: 100%;
+}
+
+/* -------------------------------------- */
+/* SEÇÕES E ITENS DE EXPOSIÇÃO (VITRINES) */
+/* -------------------------------------- */
+
+.Sinopses {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    flex-wrap: wrap; /* Para se adaptar a telas menores */
+    padding: 20px;
+}
+
+.Sinopse {
+    /* O QUADRO/VITRINE */
+    background-color: #ffffff; /* Fundo branco/papel para o item em destaque */
+    border: 3px solid #5d4037; /* Moldura escura */
+    border-radius: 5px;
+    padding: 20px;
+    width: 300px; /* Largura fixa para os "quadros" */
+    box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.2); /* Sombra pesada para dar profundidade de objeto */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    text-align: center;
+}
+
+.Sinopse:hover {
+    /* Efeito de "aproximação" ao mouse (para dar a sensação de foco no item) */
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.35);
+    border-color: #8b0000; /* Moldura se destaca no hover */
+}
+
+.Sinopse h1 {
+    /* Título do item (Placa de identificação) */
+    color: #5d4037;
+    font-size: 1.5em;
+    margin-top: 0;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #ccc; /* Linha de separação */
+}
+
+/* -------------------------------------- */
+/* LINKS (BOTÕES DE DETALHES) */
+/* -------------------------------------- */
+
+.Sinopse a {
+    /* O link como um "rótulo" ou "botão de ver detalhes" */
+    display: inline-block;
+    background-color: #a87e5b; /* Bronze/Cobre (metal de placa) */
+    color: white;
+    text-decoration: none;
+    padding: 8px 15px;
+    margin-top: 10px;
+    border-radius: 3px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    transition: background-color 0.2s;
+    border: 1px solid #7c5c40; /* Borda para dar aspecto 3D */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.Sinopse a:hover {
+    background-color: #8b0000; /* Borgonha no hover (veludo de fundo) */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* -------------------------------------- */
+/* DETALHES DE ALINHAMENTO */
+/* -------------------------------------- */
+br {
+    /* Remove o espaçamento extra e confuso que o <br> causa no HTML */
+    display: none;
+}
